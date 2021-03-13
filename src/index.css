@@ -1,0 +1,195 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: "Open Sans Condensed", sans-serif;
+}
+
+.app {
+	background: rgba(22, 25, 27, 0.404);
+	background-size: cover;
+	background-position: bottom;
+	transition: 2s ease-out;
+	overflow: hidden;
+}
+.header {
+	height: 20px;
+	width: 200px;
+	background: none;
+}
+
+.dropdown {
+	position: absolute;
+	padding: 20px;
+}
+.app.warm {
+	background: rgba(255, 72, 0, 0.377);
+}
+main img {
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+	object-fit: cover;
+	z-index: -1;
+}
+main {
+	background-image: url("https://github.com/TylerPottsDev/weather-react/blob/master/src/assets/warm-bg.jpg?raw=true");
+
+	min-height: 100vh;
+	background-image: linear-gradient(
+		to bottom,
+		rgba(0, 0, 0, 0.753),
+		rgba(0, 0, 0, 0.048)
+	);
+}
+.search-box {
+	width: 100%;
+	margin: 0 0 75px;
+	border-bottom: 1px solid white;
+}
+.search-box .search-bar {
+	display: block;
+	width: 50px;
+	padding: 15px;
+	border-bottom: 1px solid white;
+	appearance: none;
+	background: none;
+	border: none;
+	outline: none;
+
+	background-color: rgba(255, 255, 255, 0.062);
+
+	color: #ffffff;
+	font-size: 20px;
+
+	transition: 0.5s ease;
+}
+
+.search-box .search-bar:focus {
+	background-color: rgba(255, 255, 255, 0.616);
+}
+.location-box .location {
+	color: #fff;
+	font-size: 32px;
+	font-weight: 500;
+	text-align: center;
+}
+
+.location-box .date {
+	color: #fff;
+	font-size: 20px;
+	font-weight: 300;
+	font-style: italic;
+	text-align: center;
+}
+.description {
+	position: relative;
+	left: 200px;
+	background-image: url("./sun.svg");
+}
+.clear {
+	height: 100px;
+	width: 100px;
+	background-image: url("./sun.svg");
+	background-size: cover;
+}
+.clouds {
+	height: 100px;
+	width: 100px;
+	background-image: url("./cloud.svg");
+	background-size: cover;
+}
+.forecastTempRow {
+	font-size: 28px;
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	align-items: center;
+	width: 60%;
+	justify-content: space-between;
+	color: white;
+}
+.weather-box {
+	position: relative;
+}
+.weather-box .temp {
+	position: relative;
+	display: inline-block;
+	margin: 30px 200px auto;
+	background-color: rgba(255, 255, 255, 0);
+	border-radius: 16px;
+	/* padding: 15px 25px; */
+	color: #fff;
+	font-size: 102px;
+	text-align: center;
+}
+
+.weather-box .weather {
+	color: #fff;
+	font-size: 48px;
+	font-weight: 700;
+}
+.sidebar {
+	width: 20px;
+}
+.sidebar {
+	font-size: 18px;
+	list-style: none;
+	padding-top: 80px;
+	line-height: 20px;
+	padding-left: 40px;
+	text-align: left;
+	position: absolute;
+	top: 0px;
+	color: rgba(255, 255, 255, 0);
+	width: 20px;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.904);
+	transition: 0.5s;
+}
+.sidebar li {
+	list-style: none;
+	margin-bottom: 30px;
+}
+.sidebar:hover {
+	width: 300px;
+	color: white;
+	transition: 0.5s;
+}
+strong {
+	position: absolute;
+	left: 200px;
+}
+@media (min-width: 768px) {
+	.search-box {
+		margin: auto;
+		width: 400px;
+	}
+}
+@media (max-width: 508px) {
+	.search-box {
+		margin: auto;
+		width: 100%;
+	}
+	.sidebar {
+		position: absolute;
+		top: 430px;
+		height: 200px;
+		width: 100%;
+		color: white;
+		padding-top: 20px;
+	}
+	.sidebar:hover {
+		width: 100%;
+	}
+	.sidebar li {
+		list-style: none;
+		margin-bottom: 12px;
+	}
+	.sidebar ul {
+		position: relative;
+		margin-bottom: 500px;
+	}
+}
