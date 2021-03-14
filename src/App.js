@@ -287,6 +287,7 @@ function App() {
 											<div className="forecacstColOne">
 												<div>{tomorrow()}</div>
 												<img
+													style={{ color: "white" }}
 													className="icon"
 													src={icons[0]}
 													alt=""
