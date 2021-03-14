@@ -1,10 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Clear from "./Clear.svg";
-import Clouds from "./Clouds.svg";
-import Rain from "./Rain.svg";
-import Snow from "./Snow.svg";
-import Scattered from "./Scattered.svg";
-import Broken from "./Broken.svg";
 import Humidity from "./Humidity.svg";
 import Wind from "./Wind.svg";
 import Location from "./Search.svg";
@@ -51,34 +45,40 @@ function App() {
 
 							let array = [];
 							for (let i = 0; i < 4; i++) {
-								if (result.list[i].weather[0].main == "Rain") {
-									array[i] = Rain;
+								if (result.list[i].weather[0].main === "Rain") {
+									array[i] =
+										"https://res.cloudinary.com/danielmurphy/image/upload/v1615705288/weatherApp/Rain_xfluyi.svg";
 								} else if (
-									result.list[i].weather[0].description ==
+									result.list[i].weather[0].description ===
 									"clear sky"
 								) {
-									array[i] = Clear;
+									array[i] =
+										"https://res.cloudinary.com/danielmurphy/image/upload/v1615705290/weatherApp/Clear_cdl7go.svg";
 								} else if (
-									result.list[i].weather[0].description ==
+									result.list[i].weather[0].description ===
 										"scattered clouds" ||
-									result.list[i].weather[0].description ==
+									result.list[i].weather[0].description ===
 										"few clouds"
 								) {
-									array[i] = Scattered;
+									array[i] =
+										"https://res.cloudinary.com/danielmurphy/image/upload/v1615705288/weatherApp/Scattered_c1m5up.svg";
 								} else if (
-									result.list[i].weather[0].main == "Snow"
+									result.list[i].weather[0].main === "Snow"
 								) {
-									array[i] = Snow;
+									array[i] =
+										"https://res.cloudinary.com/danielmurphy/image/upload/v1615705288/weatherApp/Snow_optz8i.svg";
 								} else if (
-									result.list[i].weather[0].description ==
+									result.list[i].weather[0].description ===
 									"broken clouds"
 								) {
-									array[i] = Broken;
+									array[i] =
+										"https://res.cloudinary.com/danielmurphy/image/upload/v1615705290/weatherApp/Broken_of6ay5.svg";
 								} else if (
-									result.list[i].weather[0].description ==
+									result.list[i].weather[0].description ===
 									"overcast clouds"
 								) {
-									array[i] = Clouds;
+									array[i] =
+										"https://res.cloudinary.com/danielmurphy/image/upload/v1615705290/weatherApp/Clouds_nrdjl4.svg";
 								}
 							}
 							setIcons(array);
@@ -92,9 +92,7 @@ function App() {
 		}
 	};
 	let today = new Date();
-	let date = today.getDate();
-	let month = today.getMonth() + 1;
-	let year = today.getFullYear();
+
 	const dateToday = () => {
 		let tod = new Date(today.getTime()).toDateString().split("2021");
 		return tod;
@@ -135,22 +133,34 @@ function App() {
 						"https://images.unsplash.com/photo-1498857006179-0ab79e24640b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
 				);
 				if (result.weather[0].main === "Rain") {
-					setMainIcon(Rain);
+					setMainIcon(
+						"https://res.cloudinary.com/danielmurphy/image/upload/v1615705288/weatherApp/Rain_xfluyi.svg"
+					);
 				} else if (result.weather[0].description === "clear sky") {
-					setMainIcon(Clear);
+					setMainIcon(
+						"https://res.cloudinary.com/danielmurphy/image/upload/v1615705290/weatherApp/Clear_cdl7go.svg"
+					);
 				} else if (
 					result.weather[0].description === "scattered clouds" ||
 					result.weather[0].description === "few clouds"
 				) {
-					setMainIcon(Scattered);
+					setMainIcon(
+						"https://res.cloudinary.com/danielmurphy/image/upload/v1615705288/weatherApp/Scattered_c1m5up.svg"
+					);
 				} else if (result.weather[0].main === "Snow") {
-					setMainIcon(Snow);
+					setMainIcon(
+						"https://res.cloudinary.com/danielmurphy/image/upload/v1615705288/weatherApp/Snow_optz8i.svg"
+					);
 				} else if (result.weather[0].description === "broken clouds") {
-					setMainIcon(Broken);
+					setMainIcon(
+						"https://res.cloudinary.com/danielmurphy/image/upload/v1615705290/weatherApp/Broken_of6ay5.svg"
+					);
 				} else if (
 					result.weather[0].description === "overcast clouds"
 				) {
-					setMainIcon(Clouds);
+					setMainIcon(
+						"https://res.cloudinary.com/danielmurphy/image/upload/v1615705290/weatherApp/Clouds_nrdjl4.svg"
+					);
 				}
 				console.log("weather", result);
 			});
@@ -162,13 +172,17 @@ function App() {
 				let array = [];
 				for (let i = 0; i < 4; i++) {
 					if (result.list[i].weather[0].main === "Clouds") {
-						array[i] = Clouds;
+						array[i] =
+							"https://res.cloudinary.com/danielmurphy/image/upload/v1615705290/weatherApp/Clouds_nrdjl4.svg";
 					} else if (result.list[i].weather[0].main === "Clear") {
-						array[i] = Clear;
+						array[i] =
+							"https://res.cloudinary.com/danielmurphy/image/upload/v1615705290/weatherApp/Clear_cdl7go.svg";
 					} else if (result.list[i].weather[0].main === "Rain") {
-						array[i] = Rain;
+						array[i] =
+							"https://res.cloudinary.com/danielmurphy/image/upload/v1615705288/weatherApp/Rain_xfluyi.svg";
 					} else if (result.list[i].weather[0].main === "Snow") {
-						array[i] = Snow;
+						array[i] =
+							"https://res.cloudinary.com/danielmurphy/image/upload/v1615705288/weatherApp/Snow_optz8i.svg";
 					}
 				}
 				setIcons(array);
@@ -391,5 +405,3 @@ function App() {
 }
 
 export default App;
-
-///write conditional for undefined i.e. sound africa
