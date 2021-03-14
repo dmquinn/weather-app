@@ -1,5 +1,5 @@
 <h1>React Weather App</h1>
-<br/><br/>
+
 <h4>Visit the deployed page <a href="https://dmquinn.github.io/weather-app/">here</a>
   
 <br/><br/>
@@ -12,3 +12,6 @@ Development <ul>
   <li>CSS</li>
   <li>Svg images made using Inkscape</li>
   </ul>
+  <br/>
+  
+  ![](weather.gif)
