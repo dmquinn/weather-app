@@ -397,7 +397,7 @@ function App() {
 						)}
 					</main>
 					<div className="footer">
-						<p>&copy 2021 : Created By Daniel Murphy</p>
+						<p>&copy; 2021 : Created By Daniel Murphy</p>
 					</div>
 				</div>
 			)}
